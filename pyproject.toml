@@ -4,21 +4,21 @@ build-backend = "hatchling.build"
 
 [project]
 name = "loopforge"
-version = "1.0.0"
-description = "LoopForge - A self-correcting coding agent powered by Gemini 2.0 Flash"
+version = "0.1.0"
+description = "LoopForge: A Gemini 2.0 Flash powered coding agent"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
-    "starlette>=0.37.0",
-    "uvicorn>=0.27.0",
-    "google-generativeai>=0.8.0",
+    "a2a-sdk==0.3.10",
+    "starlette>=0.36.0",
+    "uvicorn[standard]>=0.24.0",
     "python-dotenv>=1.0.0",
+    "google-generativeai>=0.7.0",
     "pydantic>=2.0.0",
-    "httpx>=0.28.1",
 ]
 
 [project.optional-dependencies]
-test = [
+dev = [
     "pytest>=7.0",
     "pytest-asyncio>=0.21.0",
 ]
@@ -27,4 +27,4 @@ test = [
 packages = ["src"]
 
 [tool.uv]
-required-version = ">=0.1.0"
+required-version = ">=0.4.0"
